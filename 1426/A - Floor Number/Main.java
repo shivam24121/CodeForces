@@ -10,6 +10,9 @@ public class Main{
         }
     }
     public static void solve(int n,int k){
+        if(n<=2){
+            System.out.println(1);
+            return;
         int res=(int)Math.ceil((n-2)/(double)k);
         System.out.println(res+1);
     }
