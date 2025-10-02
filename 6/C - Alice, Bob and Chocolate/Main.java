@@ -16,20 +16,16 @@ public class Main{
         int alice=0,bob=0;
         int aTime=0,bTime=0;
         
-        while(l<r){
-            aTime+=a[l];
-            alice++;
-            bTime+=a[r];
-            bob++;
-            l++;
-            r--;
-        }
-        if(a[l]==a[r]){
+        while(l<=r){
             if(aTime<=bTime){
+                aTime+=a[l];
                 alice++;
+                l++;
             }
             else{
+                bTime+=a[r];
                 bob++;
+                r--;
             }
         }
         System.out.println(alice+" "+bob);
